@@ -1,0 +1,21 @@
+<?php
+    include_once "Shape.php";
+
+    class Circle extends Shape {
+        public $radius;
+     
+        function __construct($name, $radius) {
+            parent::__construct($name);
+            $this->radius = $radius;
+        }
+
+        function calculateArea() {
+            return pi() * $this->radius * $this->radius;
+        }
+
+        function calculatePerimeter() {
+            return 2 * pi() * $this->radius;
+        }
+    }
+
+?>
